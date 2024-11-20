@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <title>Navbar with Theme Switch</title>
+</head>
+<body class="bg-white text-black">
+    <!-- НАВБАР -->
+    <nav>
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <!-- Логотип -->
+            <a href="#">
+                <img src="assets/logo.PNG" alt="Logo" class="w-24 h-auto">
+            </a>
+            <!-- Меню -->
+            <ul class="flex space-x-4">
+                <li>
+                    <a href="#" 
+                       class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                       Про нас
+                    </a>
+                </li>
+                <li>
+                    <a href="#" 
+                       class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                       About
+                    </a>
+                </li>
+                <li>
+                    <a href="#" 
+                       class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                       Services
+                    </a>
+                </li>
+                <li>
+                    <a href="#" 
+                       class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                       Contact
+                    </a>
+                </li>
+            </ul>
+            <!-- Кнопки -->
+            <div class="flex items-center space-x-4">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/yourprofile/" 
+                   target="_blank" rel="noopener noreferrer" 
+                   class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <!-- Перемикання кольору -->
+                <button id="colorButton" 
+                        class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+
+    <!-- Hero -->
+    <section>
+        <div class="container mx-auto flex justify-center items-center h-screen relative">
+            <!-- Збільшений розмір картинок та розташування за текстом -->
+            <div class="relative z-10 text-center">
+                <h1 class="text-4xl font-bold mb-6">Приватний садок «Радість»</h1>
+                <p class="text-lg mt-4 bg-[#720bc4] text-white py-4 px-6 rounded font-bold">
+                    - це найкраще рішення для соціалізації та розвитку дитини.
+                </p>
+            </div>
+    
+            <!-- Перша картинка в лівому верхньому кутку -->
+            <img src="/assets/hero.jpg" alt="" class="w-2/3 max-w-md rounded-lg absolute top-0 left-0 z-0">
+    
+            <!-- Друга картинка в правому верхньому кутку -->
+            <img src="assets/IMAGE 2024-11-19 21:48:48.jpg" alt="" class="w-1/3 max-w-md rounded-lg absolute top-0 right-0 z-0">
+    
+            <!-- Третя картинка в лівому нижньому кутку -->
+            <img src="assets/IMAGE 2024-11-19 21:48:40.jpg" alt="" class="w-2/3 max-w-md rounded-lg absolute bottom-0 left-0 z-0">
+        </div>
+    </section>
+    
+    
+    
+    
+    
+
+    <script>
+        const button = document.querySelector('#colorButton');
+        const body = document.body;
+
+        button.addEventListener('click', () => {
+            body.classList.toggle('bg-gray-900');
+            body.classList.toggle('text-white');
+            body.classList.toggle('bg-white');
+            body.classList.toggle('text-black');
+            
+            // Зміна іконки
+            const icon = button.querySelector('i');
+            if (body.classList.contains('bg-gray-900')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+    </script>
+</body>
+</html>
