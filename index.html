@@ -5,96 +5,390 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- AOS Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Navbar with Theme Switch</title>
 </head>
-<body class="bg-white text-black">
-    <!-- НАВБАР -->
-    <nav>
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <!-- Логотип -->
-            <a href="#">
-                <img src="assets/logo.PNG" alt="Logo" class="w-24 h-auto">
-            </a>
-            <!-- Меню -->
-            <ul class="flex space-x-4">
-                <li>
-                    <a href="#" 
-                       class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                       Про нас
-                    </a>
-                </li>
-                <li>
-                    <a href="#" 
-                       class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                       About
-                    </a>
-                </li>
-                <li>
-                    <a href="#" 
-                       class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                       Services
-                    </a>
-                </li>
-                <li>
-                    <a href="#" 
-                       class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                       Contact
-                    </a>
-                </li>
-            </ul>
-            <!-- Кнопки -->
-            <div class="flex items-center space-x-4">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/yourprofile/" 
-                   target="_blank" rel="noopener noreferrer" 
-                   class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <!-- Перемикання кольору -->
-                <button id="colorButton" 
-                        class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                    <i class="fas fa-sun"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-    
-    
-    
+<body class="bg-white text-black" style='font-family: "Montserrat", sans-serif;'>
 
-    <!-- Hero -->
-    <section>
-        <div class="container mx-auto flex justify-center items-center h-screen relative">
-            <!-- Збільшений розмір картинок та розташування за текстом -->
-            <div class="relative z-10 text-center">
-                <h1 class="text-4xl font-bold mb-6">Приватний садок «Радість»</h1>
-                <p class="text-lg mt-4 bg-[#720bc4] text-white py-4 px-6 rounded font-bold">
-                    - це найкраще рішення для соціалізації та розвитку дитини.
-                </p>
+    <!-- НАВБАР -->
+<nav class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="200">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <!-- Логотип -->
+        <a href="#hero" class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="300">
+            <img src="assets/logo.PNG" alt="Logo" class="w-32 h-auto">
+        </a>
+
+        <!-- Бургер-меню (при маленьких екранах) -->
+        <div class="block lg:hidden">
+            <button id="burgerButton" class="text-black p-2">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Меню (для великих екранів) -->
+        <ul class="hidden lg:flex space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="400">
+            <li>
+                <a href="#About" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Про нас</a>
+            </li>
+            <li>
+                <a href="#Advantages" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Наші переваги</a>
+            </li>
+            <li>
+                <a href="#Price" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Ціни</a>
+            </li>
+            <li>
+                <a href="#Contact" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Контакти</a>
+            </li>
+        </ul>
+
+        <!-- Кнопки -->
+        <div class="flex items-center space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="500">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/yourprofile/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <!-- Перемикання кольору -->
+            <button id="colorButton" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Бургер-меню (при маленьких екранах) -->
+    <div id="burgerMenu" class="lg:hidden hidden bg-[#321fb2] w-full p-4">
+        <ul class="space-y-4 text-white">
+            <li><a href="#About" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Про нас</a></li>
+            <li><a href="#Advantages" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Наші переваги</a></li>
+            <li><a href="#Price" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Ціни</a></li>
+            <li><a href="#Contact" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Контакти</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+  <!-- Hero -->
+<section id="hero">
+    <div class="container mx-auto flex flex-col lg:flex-row justify-center items-center h-screen relative" data-aos="fade-in" data-aos-delay="600">
+        <!-- Текстовий блок -->
+        <div class="relative z-10 text-center lg:text-left lg:w-1/2" data-aos="fade-up" data-aos-delay="700">
+            <h1 class="text-3xl lg:text-4xl font-bold mb-6">Приватний садок «Радість»</h1>
+            <p class="text-lg lg:text-xl mt-4 bg-[#1fb232] text-white py-4 px-6 rounded font-bold">
+                - це найкраще рішення для соціалізації та розвитку дитини.
+            </p>
+        </div>
+
+        <!-- Зображення -->
+        <div class="lg:w-1/2 flex flex-wrap justify-center lg:justify-start">
+            <!-- Перше зображення -->
+            <img src="/assets/hero.jpg" alt="" class="w-4/5 lg:w-2/3 max-w-lg rounded-lg absolute top-0 left-0 z-0 m-4 lg:m-12 hidden lg:block" data-aos="fade-up" data-aos-delay="800">
+            <!-- Друге зображення -->
+            <img src="assets/IMAGE 2024-11-19 21:48:48.jpg" alt="" class="w-4/5 lg:w-1/3 max-w-md rounded-lg absolute top-0 right-0 z-0 m-4 lg:m-10 hidden lg:block" data-aos="fade-up" data-aos-delay="900">
+            <!-- Третє зображення -->
+            <img src="assets/IMAGE 2024-11-19 21:48:40.jpg" alt="" class="w-4/5 lg:w-2/3 max-w-md rounded-lg absolute bottom-0 left-0 z-0 m-4 lg:m-11 hidden lg:block" data-aos="fade-up" data-aos-delay="1000">
+            <!-- Четверте зображення -->
+            <img src="assets/adventages/DSC_6071.jpg" alt="" class="w-4/5 lg:w-5/6 max-w-lg rounded-lg absolute bottom-0 right-0 z-0 m-4 lg:m-12 hidden lg:block" data-aos="fade-up" data-aos-delay="1100">
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="About">
+    <div class="container mx-auto px-4 mt-16 lg:mt-24" data-aos="fade-up">
+        <div>
+            <p>
+                <span class="text-[#720bc4] text-3xl lg:text-4xl font-bold">Садок «Радість»</span>
+                <span class="text-xl lg:text-2xl font-semibold block mt-2">
+                    — це місце, де ваша дитина почне свою освітню подорож з упевненістю в собі.
+                </span>
+            </p>
+        </div>
+        <div class="flex justify-center lg:justify-end mt-6">
+            <p class="text-lg lg:text-xl italic text-center lg:text-left">
+                "Ми віримо у потужність співпраці та відкритого спілкування.<br> Ми прагнемо створити партнерські відносини з батьками,<br>щоб спільно працювати над розвитком та навчанням дітей.<br>Ми розуміємо, що кожен успіх дитини залежить від нашої спільної роботи та взаєморозуміння."
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Переваги -->
+
+    <section id="Advantages">
+        <div class="container mx-auto px-4" style="margin-top: 10%;" data-aos="fade-up">
+            <div class="flex justify-center">
+                <h1 class="font-bold italic     px-6" style="font-size: 42px;">Наші переваги</h1>
             </div>
+            <div class="flex flex-wrap justify-center gap-6 m-12">
+                <!-- Потужна освітня програма -->
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5430.jpg" alt="">
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Потужна освітня програма</h5>
+                    <p class="mb-3 font-normal text-gray-700">Заняття в садочку це вдале поєднання наших найкращих напрацювань та авторських методик, які дають найкращі результати у навчанні.</p>
+                  </div>
+                </a>
+                <!-- Малокомплектні групи -->
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5298.jpg" alt="">
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Малокомплектні групи</h5>
+                    <p class="mb-3 font-normal text-gray-700">Це дозволяє нам знайти індивідуальний підхід до кожної дитини та приділяти їй достатньо уваги. Ми формуємо групи до 12 діток.</p>
+                  </div>
+                </a>
+                <!-- Безпека -->
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5231.jpg" alt="">
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Безпека</h5>
+                    <p class="mb-3 font-normal text-gray-700">Маємо закриту територію з відеоспостереженням, бактерицидними рециркуляторами та сертифікованим укриттям.</p>
+                  </div>
+                </a>
+                <!-- Кваліфіковані працівники -->
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5091.jpg" alt="">
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Кваліфіковані працівники</h5>
+                    <p class="mb-3 font-normal text-gray-700">Наші вихователі мають великий педагогічний досвід та регулярно проходять курси підвищення кваліфікації.</p>
+                  </div>
+                </a>
+                <!-- Зручний графік -->
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5468.jpg" alt="">
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Зручний графік</h5>
+                    <p class="mb-3 font-normal text-gray-700">Ми пропонуємо різні варіанти режиму перебування дітей, щоб задовольнити потреби кожної сім'ї.</p>
+                  </div>
+                </a>
+                <!-- Фінансова лояльність -->
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5649.jpg" alt="">
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Фінансова лояльність</h5>
+                    <p class="mb-3 font-normal text-gray-700">Можливість вибору тарифного плану та отримання фінансових канікул терміном 1 місяць із збереженням місця.</p>
+                  </div>
+                </a>
+                <!-- Зручне розташування -->
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Зручне розташування</h5>
+                    <p class="mb-3 font-normal text-gray-700">Наш садочок знаходиться у центрі міста за адресою м. Коломия, бул. Лесі Українки, 17.</p>
+                  </div>
+                </a>
+              </div>
+              <div style="margin-top: 10%;" data-aos="fade-up">
+                    <h1 class="italic" style="font-size: 36px;"><span class="rounded rounded-lg" style="font-size: 56px ; color: #720bc4;">Дитячий центр «Радість» </span>є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів</h1>
+              </div>
+        </div>
+    </section>
+
+    <section id="Price" style="margin-top: 10%;" data-aos="fade-up">
+        <div class="flex justify-center">
+            <h1 class="italic font-bold text-4xl sm:text-5xl md:text-6xl">Абонементи</h1>
+        </div>
+        <div class="flex justify-center text-center px-4 sm:px-8">
+            <h5 class="text-base sm:text-lg md:text-xl">
+                У нас є різні види Абонементів для вашої зручності: абонементи на 2 тижні, на місяць, на цілий день, на півдня,<br>
+                з відвідуванням 2, 3, чи 5 разів на тиждень.<br>
+                Найпопулярніші - це абонементи на місяць: Стандарт - на повний день, та Міні - на півдня.
+            </h5>
+        </div>
     
-            <!-- Перша картинка в лівому верхньому кутку -->
-            <img src="/assets/hero.jpg" alt="" class="w-2/3 max-w-md rounded-lg absolute top-0 left-0 z-0">
-    
-            <!-- Друга картинка в правому верхньому кутку -->
-            <img src="assets/IMAGE 2024-11-19 21:48:48.jpg" alt="" class="w-1/3 max-w-md rounded-lg absolute top-0 right-0 z-0">
-    
-            <!-- Третя картинка в лівому нижньому кутку -->
-            <img src="assets/IMAGE 2024-11-19 21:48:40.jpg" alt="" class="w-2/3 max-w-md rounded-lg absolute bottom-0 left-0 z-0">
+        <div class="container mx-auto mt-12 animate__animated fade-up">
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Перший компонент -->
+                <div class="w-full max-w-sm p-4 bg-white border border-gray-300 rounded-lg shadow sm:p-8">
+                    <h5 class="mb-4 text-xl font-medium text-gray-700">Пакет «Standart»</h5>
+                    <div class="text-gray-900">
+                        <ul role="list" class="space-y-5 my-7">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <span class="ml-3 text-base text-gray-600">Розвиваючі заняття за методикою Макото Шичіди (для дітей 2-3, 3-4 роки) / курс «Підготовка до школи» (для дітей 4-5, 5-6 років), нейрофітнес, хореографія, творчі заняття</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <span class="ml-3 text-base text-gray-600">Англійська мова 2 рази на тиждень</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <span class="ml-3 text-base text-gray-600">П'ятиразове харчування*</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <span class="ml-3 text-base text-gray-600">Часи роботи: 8:30-18:30</span>
+                            </li>
+                        </ul>
+                        <p class="text-xl font-bold text-gray-800">Вартість абонемента 7950 грн/місяць</p>
+                        <p class="text-sm text-gray-500 mt-2">*Харчування оплачується додатково, лише за ті дні, коли дитина відвідує садок (80 грн/день).</p>
+                        <p class="text-sm text-gray-500 mt-2">Одноразовий вступний внесок 1000 грн (на свята, подарунки тощо).</p>
+                        <button type="button" class="mt-5 text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 w-full">
+                            <a href="#Contact" class="hover:text-[#720bc4]">Зв'язатися</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Другий компонент -->
+                <div class="w-full max-w-sm p-4 bg-white border border-gray-300 rounded-lg shadow sm:p-8">
+                    <h5 class="mb-4 text-xl font-medium text-gray-700">Пакет «Mini»</h5>
+                    <div class="text-gray-900">
+                        <ul role="list" class="space-y-5 my-7">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <span class="ml-3 text-base text-gray-600">Розвиваючі заняття за методикою Макото Шичіди (для дітей 2-3, 3-4 роки) / курс «Підготовка до школи» (для дітей 4-5, 5-6 років), нейрофітнес, хореографія, творчі заняття</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <span class="ml-3 text-base text-gray-600">Англійська мова 2 рази на тиждень</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <span class="ml-3 text-base text-gray-600">П'ятиразове харчування*</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <span class="ml-3 text-base text-gray-600">Часи роботи: 8:30-18:30</span>
+                            </li>
+                        </ul>
+                        <p class="text-xl font-bold text-gray-800">Вартість абонемента 6950 грн/місяць</p>
+                        <p class="text-sm text-gray-500 mt-2">*Харчування оплачується додатково, лише за ті дні, коли дитина відвідує садок (80 грн/день).</p>
+                        <p class="text-sm text-gray-500 mt-2">Одноразовий вступний внесок 1000 грн (на свята, подарунки тощо).</p>
+                        <button type="button" class="mt-5 text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 w-full">
+                            <a href="#Contact" class="hover:text-[#720bc4]">Зв'язатися</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
-    
-    
-    
-    
 
+    <!-- Contact -->
+    <section id="Contact" class=" py-12" style="margin-top: 10%; margin-bottom: 10%;" data-aos="fade-up">
+        <div class="container mx-auto max-w-lg px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">Зв'язатися з нами</h2>
+            <h3 class="text-xl italic text-center mb-6">Ми подаруємо Вашій дитині щасливе та пізнавальне дозвілля</i></h3>
+            <form class="bg-white p-6 rounded-lg shadow-md">
+                <!-- Ім'я -->
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Ім'я</label>
+                    <input type="text" id="name" name="name" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" 
+                        placeholder="Введіть ваше ім'я" required>
+                </div>
+                <!-- Номер телефону -->
+                <div class="mb-4">
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Номер телефону</label>
+                    <input type="tel" id="phone" name="phone" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" 
+                        placeholder="+380 123 456 789" required>
+                </div>
+                <!-- Кнопка відправлення -->
+                <button type="submit" 
+                    class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                    Надіслати
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+<footer class="bg-gradient-to-r from-[#321fb2] to-[#720bc4] rounded-t-3xl py-12">
+    <div class="container mx-auto text-white">
+        <!-- Main footer content -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-4">Про нас</h3>
+                <p>Приватний садок «Радість» пропонує найкраще для ваших дітей.</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-4">Корисні посилання</h3>
+                <ul>
+                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Головна</a></li>
+                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Наші послуги</a></li>
+                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Контакти</a></li>
+                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Блог</a></li>
+                </ul>
+            </div>
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-4">Контакти</h3>
+                <p>+38 (012) 345-67-89</p>
+                <p>info@radist.com</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-4">Соціальні мережі</h3>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/yourprofile/" target="_blank" class="text-[#f8f8f8] hover:text-[#720bc4]">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/yourprofile/" target="_blank" class="text-[#f8f8f8] hover:text-[#720bc4]">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://twitter.com/yourprofile/" target="_blank" class="text-[#f8f8f8] hover:text-[#720bc4]">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom footer -->
+        <div class="text-center mt-8">
+            <p>© 2022 Приватний садок «Радість». Всі права захищені.</p>
+            <p>
+                Designed by 
+                <a href="https://www.instagram.com/yourprofile/" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="text-[#f8f8f8] font-bold hover:text-[#720bc4]">
+                    Your Name
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script>
+         // JavaScript для бургер-меню
+        const burgerButton = document.getElementById('burgerButton');
+        const burgerMenu = document.getElementById('burgerMenu');
+
+        burgerButton.addEventListener('click', () => {
+            burgerMenu.classList.toggle('hidden');
+        });
+        AOS.init({
+            duration: 1000, // тривалість анімації
+            easing: 'ease-in-out', // плавність анімації
+            once: true, // анімація відбувається тільки один раз
+        });
+
         const button = document.querySelector('#colorButton');
         const body = document.body;
 
         button.addEventListener('click', () => {
-            body.classList.toggle('bg-gray-900');
+            body.classList.toggle('bg-[#1F1F1F]');
             body.classList.toggle('text-white');
             body.classList.toggle('bg-white');
             body.classList.toggle('text-black');
