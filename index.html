@@ -11,67 +11,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Navbar with Theme Switch</title>
+    <title>radist</title>
 </head>
 <body class="bg-white text-black" style='font-family: "Montserrat", sans-serif;'>
 
     <!-- НАВБАР -->
-<nav class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="200">
-    <div class="container mx-auto flex justify-between items-center p-4">
-        <!-- Логотип -->
-        <a href="#hero" class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="300">
-            <img src="assets/logo.PNG" alt="Logo" class="w-32 h-auto">
-        </a>
-
-        <!-- Бургер-меню (при маленьких екранах) -->
-        <div class="block lg:hidden">
-            <button id="burgerButton" class="text-black p-2">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- Меню (для великих екранів) -->
-        <ul class="hidden lg:flex space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="400">
-            <li>
-                <a href="#About" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Про нас</a>
-            </li>
-            <li>
-                <a href="#Advantages" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Наші переваги</a>
-            </li>
-            <li>
-                <a href="#Price" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Ціни</a>
-            </li>
-            <li>
-                <a href="#Contact" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Контакти</a>
-            </li>
-        </ul>
-
-        <!-- Кнопки -->
-        <div class="flex items-center space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="500">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/yourprofile/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                <i class="fa-brands fa-instagram"></i>
+    <nav class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="200">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <!-- Логотип -->
+            <a href="#hero" class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="300">
+                <img src="assets/logo.PNG" alt="Logo" class="w-32 h-auto">
             </a>
-            <!-- Перемикання кольору -->
-            <button id="colorButton" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                <i class="fas fa-sun"></i>
-            </button>
+    
+            <!-- Бургер-меню (при маленьких екранах) -->
+            <div class="block lg:hidden">
+                <button id="burgerButton" class="text-black p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+    
+            <!-- Меню (для великих екранів) -->
+            <ul class="hidden lg:flex space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="400">
+                <li>
+                    <a href="#About" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Про нас</a>
+                </li>
+                <li>
+                    <a href="#Advantages" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Наші переваги</a>
+                </li>
+                <li>
+                    <a href="#Price" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Ціни</a>
+                </li>
+                <li>
+                    <a href="#Contact" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Контакти</a>
+                </li>
+            </ul>
+    
+            <!-- Кнопки -->
+            <div class="flex items-center space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="500">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/yourprofile/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                    <i class="fa-brands fa-instagram text-3xl"></i> <!-- Збільшення іконки -->
+                </a>
+            </div>
         </div>
-    </div>
+    
+        <!-- Бургер-меню (при маленьких екранах) -->
+        <div id="burgerMenu" class="lg:hidden hidden bg-[#321fb2] w-full p-4">
+            <ul class="space-y-4 text-white">
+                <li><a href="#About" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Про нас</a></li>
+                <li><a href="#Advantages" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Наші переваги</a></li>
+                <li><a href="#Price" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Ціни</a></li>
+                <li><a href="#Contact" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- Бургер-меню (при маленьких екранах) -->
-    <div id="burgerMenu" class="lg:hidden hidden bg-[#321fb2] w-full p-4">
-        <ul class="space-y-4 text-white">
-            <li><a href="#About" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Про нас</a></li>
-            <li><a href="#Advantages" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Наші переваги</a></li>
-            <li><a href="#Price" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Ціни</a></li>
-            <li><a href="#Contact" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Контакти</a></li>
-        </ul>
-    </div>
-</nav>
 
 
-  <!-- Hero -->
+<!-- Hero -->
 <section id="hero">
     <div class="container mx-auto flex flex-col lg:flex-row justify-center items-center h-screen relative" data-aos="fade-in" data-aos-delay="600">
         <!-- Текстовий блок -->
@@ -83,18 +80,20 @@
         </div>
 
         <!-- Зображення -->
-        <div class="lg:w-1/2 flex flex-wrap justify-center lg:justify-start">
+        <div class="lg:w-1/2 flex flex-wrap justify-center lg:justify-start relative">
             <!-- Перше зображення -->
-            <img src="/assets/hero.jpg" alt="" class="w-4/5 lg:w-2/3 max-w-lg rounded-lg absolute top-0 left-0 z-0 m-4 lg:m-12 hidden lg:block" data-aos="fade-up" data-aos-delay="800">
+            <img src="/assets/hero.jpg" alt="" class="w-full md:w-2/3 lg:w-1/2 max-w-lg rounded-lg absolute top-0 left-0 z-0 m-4 lg:m-12 block" data-aos="fade-up" data-aos-delay="800">
             <!-- Друге зображення -->
-            <img src="assets/IMAGE 2024-11-19 21:48:48.jpg" alt="" class="w-4/5 lg:w-1/3 max-w-md rounded-lg absolute top-0 right-0 z-0 m-4 lg:m-10 hidden lg:block" data-aos="fade-up" data-aos-delay="900">
+            <img src="assets/IMAGE 2024-11-19 21:48:48.jpg" alt="" class="w-full md:w-1/3 lg:w-1/4 max-w-md rounded-lg absolute top-0 right-0 z-0 m-4 lg:m-10 block" data-aos="fade-up" data-aos-delay="900">
             <!-- Третє зображення -->
-            <img src="assets/IMAGE 2024-11-19 21:48:40.jpg" alt="" class="w-4/5 lg:w-2/3 max-w-md rounded-lg absolute bottom-0 left-0 z-0 m-4 lg:m-11 hidden lg:block" data-aos="fade-up" data-aos-delay="1000">
+            <img src="assets/IMAGE 2024-11-19 21:48:40.jpg" alt="" class="w-full md:w-2/3 lg:w-1/2 max-w-md rounded-lg absolute bottom-0 left-0 z-0 m-4 lg:m-11 block" data-aos="fade-up" data-aos-delay="1000">
             <!-- Четверте зображення -->
-            <img src="assets/adventages/DSC_6071.jpg" alt="" class="w-4/5 lg:w-5/6 max-w-lg rounded-lg absolute bottom-0 right-0 z-0 m-4 lg:m-12 hidden lg:block" data-aos="fade-up" data-aos-delay="1100">
+            <img src="assets/adventages/DSC_6071.jpg" alt="" class="w-full md:w-5/6 lg:w-3/4 max-w-lg rounded-lg absolute bottom-0 right-0 z-0 m-4 lg:m-12 block" data-aos="fade-up" data-aos-delay="1100">
         </div>
     </div>
 </section>
+
+
 
 <!-- About -->
 <section id="About">
@@ -122,12 +121,12 @@
     <section id="Advantages">
         <div class="container mx-auto px-4" style="margin-top: 10%;" data-aos="fade-up">
             <div class="flex justify-center">
-                <h1 class="font-bold italic     px-6" style="font-size: 42px;">Наші переваги</h1>
+                <h1 class="font-bold px-6" style="font-size: 42px;">Наші переваги</h1>
             </div>
             <div class="flex flex-wrap justify-center gap-6 m-12">
                 <!-- Потужна освітня програма -->
                 <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
-                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5430.jpg" alt="">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/IMAGE 2024-11-21 21:56:09.jpg " alt="">
                   <div class="flex flex-col justify-between p-4 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Потужна освітня програма</h5>
                     <p class="mb-3 font-normal text-gray-700">Заняття в садочку це вдале поєднання наших найкращих напрацювань та авторських методик, які дають найкращі результати у навчанні.</p>
@@ -135,7 +134,7 @@
                 </a>
                 <!-- Малокомплектні групи -->
                 <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
-                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5298.jpg" alt="">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/IMAGE 2024-11-21 21:53:14.jpg" alt="">
                   <div class="flex flex-col justify-between p-4 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Малокомплектні групи</h5>
                     <p class="mb-3 font-normal text-gray-700">Це дозволяє нам знайти індивідуальний підхід до кожної дитини та приділяти їй достатньо уваги. Ми формуємо групи до 12 діток.</p>
@@ -143,7 +142,7 @@
                 </a>
                 <!-- Безпека -->
                 <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
-                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5231.jpg" alt="">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/IMAGE 2024-11-21 21:57:10.jpg" alt="">
                   <div class="flex flex-col justify-between p-4 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Безпека</h5>
                     <p class="mb-3 font-normal text-gray-700">Маємо закриту територію з відеоспостереженням, бактерицидними рециркуляторами та сертифікованим укриттям.</p>
@@ -151,7 +150,7 @@
                 </a>
                 <!-- Кваліфіковані працівники -->
                 <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
-                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5091.jpg" alt="">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/IMAGE 2024-11-21 22:00:46.jpg" alt="">
                   <div class="flex flex-col justify-between p-4 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Кваліфіковані працівники</h5>
                     <p class="mb-3 font-normal text-gray-700">Наші вихователі мають великий педагогічний досвід та регулярно проходять курси підвищення кваліфікації.</p>
@@ -167,7 +166,7 @@
                 </a>
                 <!-- Фінансова лояльність -->
                 <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-[#68e87b]">
-                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/DSC_5649.jpg" alt="">
+                  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/adventages/IMAGE 2024-11-21 22:01:48.jpg" alt="">
                   <div class="flex flex-col justify-between p-4 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Фінансова лояльність</h5>
                     <p class="mb-3 font-normal text-gray-700">Можливість вибору тарифного плану та отримання фінансових канікул терміном 1 місяць із збереженням місця.</p>
@@ -182,14 +181,14 @@
                 </a>
               </div>
               <div style="margin-top: 10%;" data-aos="fade-up">
-                    <h1 class="italic" style="font-size: 36px;"><span class="rounded rounded-lg" style="font-size: 56px ; color: #720bc4;">Дитячий центр «Радість» </span>є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів</h1>
+                    <h1 style="font-size: 36px;"><span class="rounded rounded-lg" style="font-size: 56px ; color: #720bc4;">Дитячий центр «Радість» </span>є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів</h1>
               </div>
         </div>
     </section>
 
     <section id="Price" style="margin-top: 10%;" data-aos="fade-up">
         <div class="flex justify-center">
-            <h1 class="italic font-bold text-4xl sm:text-5xl md:text-6xl">Абонементи</h1>
+            <h1 class=" font-bold text-4xl sm:text-5xl md:text-6xl mb-6">Абонементи</h1>
         </div>
         <div class="flex justify-center text-center px-4 sm:px-8">
             <h5 class="text-base sm:text-lg md:text-xl">
@@ -235,7 +234,7 @@
                         <p class="text-sm text-gray-500 mt-2">*Харчування оплачується додатково, лише за ті дні, коли дитина відвідує садок (80 грн/день).</p>
                         <p class="text-sm text-gray-500 mt-2">Одноразовий вступний внесок 1000 грн (на свята, подарунки тощо).</p>
                         <button type="button" class="mt-5 text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 w-full">
-                            <a href="#Contact" class="hover:text-[#720bc4]">Зв'язатися</a>
+                            <a href="#Contact" class="hover:text-[#1fb232]">Зв'язатися</a>
                         </button>
                     </div>
                 </div>
@@ -273,11 +272,24 @@
                         <p class="text-sm text-gray-500 mt-2">*Харчування оплачується додатково, лише за ті дні, коли дитина відвідує садок (80 грн/день).</p>
                         <p class="text-sm text-gray-500 mt-2">Одноразовий вступний внесок 1000 грн (на свята, подарунки тощо).</p>
                         <button type="button" class="mt-5 text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 w-full">
-                            <a href="#Contact" class="hover:text-[#720bc4]">Зв'язатися</a>
+                            <a href="#Contact" class="hover:text-[#1fb232]">Зв'язатися</a>
                         </button>
                     </div>
                 </div>
+                <!-- Кнопка зі знижкою на перше заняття -->
             </div>
+            <div class="container-md flex flex-col items-center mt-12">
+                <h1 class="text-2xl font-bold mb-4 text-center">
+                    Пробний день
+                </h1>
+                <a href="#discount" class="px-8 py-3 bg-[#720bc4] text-white font-bold rounded-full shadow-lg hover:bg-[#5a14a2] transition duration-300 ease-in-out flex items-center justify-center">
+                    <span class="line-through text-gray-300 text-xl">260грн</span>
+                    <span class="ml-4 text-2xl font-semibold">50грн</span>
+                </a>
+            </div>
+            
+            
+
         </div>
     </section>
     
@@ -304,7 +316,7 @@
                 </div>
                 <!-- Кнопка відправлення -->
                 <button type="submit" 
-                    class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                    class="w-full bg-[#720bc4] text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400">
                     Надіслати
                 </button>
             </form>
