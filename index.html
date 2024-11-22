@@ -11,60 +11,103 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-question {
+            background-color: #720bc4;
+            color: white;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .faq-question:hover {
+            background-color: #5a14a2;
+        }
+    
+        .faq-answer {
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+    
+        .faq-item {
+            margin-bottom: 15px;
+        }
+    </style>
     <title>radist</title>
 </head>
 <body class="bg-white text-black" style='font-family: "Montserrat", sans-serif;'>
 
-    <!-- НАВБАР -->
-    <nav class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="200">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <!-- Логотип -->
-            <a href="#hero" class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="300">
-                <img src="assets/logo.PNG" alt="Logo" class="w-32 h-auto">
-            </a>
-    
-            <!-- Бургер-меню (при маленьких екранах) -->
-            <div class="block lg:hidden">
-                <button id="burgerButton" class="text-black p-2">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-    
-            <!-- Меню (для великих екранів) -->
-            <ul class="hidden lg:flex space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="400">
-                <li>
-                    <a href="#About" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Про нас</a>
-                </li>
-                <li>
-                    <a href="#Advantages" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Наші переваги</a>
-                </li>
-                <li>
-                    <a href="#Price" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Ціни</a>
-                </li>
-                <li>
-                    <a href="#Contact" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Контакти</a>
-                </li>
-            </ul>
-    
-            <!-- Кнопки -->
-            <div class="flex items-center space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="500">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/yourprofile/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                    <i class="fa-brands fa-instagram text-3xl"></i> <!-- Збільшення іконки -->
-                </a>
-            </div>
-        </div>
-    
+   <!-- НАВБАР -->
+<nav class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="200">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <!-- Логотип -->
+        <a href="#hero" class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="300">
+            <img src="assets/logo.PNG" alt="Logo" class="w-32 h-auto">
+        </a>
+
         <!-- Бургер-меню (при маленьких екранах) -->
-        <div id="burgerMenu" class="lg:hidden hidden bg-[#321fb2] w-full p-4">
-            <ul class="space-y-4 text-white">
-                <li><a href="#About" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Про нас</a></li>
-                <li><a href="#Advantages" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Наші переваги</a></li>
-                <li><a href="#Price" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Ціни</a></li>
-                <li><a href="#Contact" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Контакти</a></li>
-            </ul>
+        <div class="block lg:hidden">
+            <button id="burgerButton" class="text-black p-2">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </nav>
+
+        <!-- Меню (для великих екранів) -->
+        <ul class="hidden lg:flex space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="400">
+            <li>
+                <a href="#About" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Про нас</a>
+            </li>
+            <li>
+                <a href="#Advantages" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Наші переваги</a>
+            </li>
+            <li>
+                <a href="#Question" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Відповіді на питання</a>
+            </li>
+            <li>
+                <a href="#Price" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Ціни</a>
+            </li>
+            <li>
+                <a href="#Contact" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Контакти</a>
+            </li>
+        </ul>
+
+        <!-- Кнопки -->
+        <div class="flex items-center space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="500">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/yourprofile/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                <i class="fa-brands fa-instagram text-3xl"></i>
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                <i class="fa-brands fa-tiktok text-3xl"></i>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                <i class="fa-brands fa-facebook text-3xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Бургер-меню (при маленьких екранах) -->
+    <div id="burgerMenu" class="lg:hidden hidden bg-[#321fb2] w-full p-4">
+        <ul class="space-y-4 text-white">
+            <li><a href="#About" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Про нас</a></li>
+            <li><a href="#Advantages" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Наші переваги</a></li>
+            <li><a href="#Price" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Ціни</a></li>
+            <li><a href="#Contact" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Контакти</a></li>
+        </ul>
+    </div>
+</nav>
+
 
 
 
@@ -111,6 +154,15 @@
                 "Ми віримо у потужність співпраці та відкритого спілкування.<br> Ми прагнемо створити партнерські відносини з батьками,<br>щоб спільно працювати над розвитком та навчанням дітей.<br>Ми розуміємо, що кожен успіх дитини залежить від нашої спільної роботи та взаєморозуміння."
             </p>
         </div>
+    </div>
+    <div class="container-md flex flex-col items-center mt-12" data-aos="fade-up">
+            <h1 class="text-2xl font-bold mb-4 text-center">
+                Пробний день
+            </h1>
+            <a href="#Contact" class="px-8 py-3 bg-[#720bc4] text-white font-bold rounded-full shadow-lg hover:bg-[#5a14a2] transition duration-300 ease-in-out flex items-center justify-center" >
+                <span class="line-through text-gray-300 text-xl">260грн</span>
+                <span class="ml-4 text-2xl font-semibold">50грн</span>
+            </a>
     </div>
 </section>
 
@@ -180,11 +232,426 @@
                   </div>
                 </a>
               </div>
+              <div class="container-md flex flex-col items-center mt-12">
+                <h1 class="text-2xl font-bold mb-4 text-center">
+                    Пробний день
+                </h1>
+                <a href="#Contact" class="px-8 py-3 bg-[#720bc4] text-white font-bold rounded-full shadow-lg hover:bg-[#5a14a2] transition duration-300 ease-in-out flex items-center justify-center">
+                    <span class="line-through text-gray-300 text-xl">260грн</span>
+                    <span class="ml-4 text-2xl font-semibold">50грн</span>
+                </a>
+            </div>
               <div style="margin-top: 10%;" data-aos="fade-up">
                     <h1 style="font-size: 36px;"><span class="rounded rounded-lg" style="font-size: 56px ; color: #720bc4;">Дитячий центр «Радість» </span>є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів</h1>
               </div>
         </div>
     </section>
+
+
+    <!-- Відповіді на питання -->
+
+
+    <div id="Question" class="container mx-auto"  data-aos="fade-up">
+        <div class="text-center font-bold" style="font-size: 52px; margin-top: 10%; margin-bottom: 5%;">
+            <h1>Відповіді на питання:</h1>
+        </div>
+        <div class="space-y-4">
+            <!-- Question 1 -->
+            <div class="border-b border-slate-200">
+            <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Розкажіть про навчальну програму для дітей 2-3 роки?</span>
+                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                </svg>
+                </span>
+            </button>
+            <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                В нас дуже насичена і цікава програма. Працюємо ми за нашими авторськими курсами, у дітей цього віку є заняття з раннього розвитку по методиці Макото Шичиди, яка спрямована на розвиток правої півкулі (фотографічна памʼять, увага, розвиток математичних та музичних здібностей, схильність до вивчення мов), бебі-фітнес, розвиток мовлення.
+                </div>
+            </div>
+            </div>
+        
+            <!-- Question 2 -->
+            <div class="border-b border-slate-200">
+            <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Яка програма для дітей 3-4 роки?</span>
+                <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                </svg>
+                </span>
+            </button>
+            <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                Працюємо ми за нашими авторськими курсами, відповідно крім загального розвитку, у дітей є курс розвитку по методиці Макото Шичиди, емоційного інтелекту, розвиток мовлення, поглиблене вивчення англійської мови з 3-х років.
+                </div>
+            </div>
+            </div>
+        
+            <!-- Question 3 -->
+            <div class="border-b border-slate-200">
+            <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Що вивчають діти віку 4-5 років?</span>
+                <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                </svg>
+                </span>
+            </button>
+            <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                Працюємо ми за нашими авторськими курсами, зокрема підготовка до школи, курс швидкісного інтелекту, нейрофітнес, ейдетика, емоційний інтелект, театральне мистецтво, поглиблене вивчення англійської мови.
+                </div>
+            </div>
+            </div>
+        
+            <!-- Question 4 -->
+            <div class="border-b border-slate-200">
+            <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Розкажіть детальніше про заняття у діток підготовчої групи 5-6 років?</span>
+                <span id="icon-4" class="text-slate-800 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                </svg>
+                </span>
+            </button>
+            <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                Працюємо за нашими авторськими курсами, підготовка до школи, курс швидкісного інтелекту, нейрофітнес, логіка, фінансова грамотність, STEM лабораторія, поглиблене вивчення англійської мови.
+                </div>
+            </div>
+            </div>
+        
+            <!-- Additional Questions (continue the same pattern) -->
+            <div class="border-b border-slate-200">
+            <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Чи достатньо діти гуляють на вулиці?</span>
+                <span id="icon-5" class="text-slate-800 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                </svg>
+                </span>
+            </button>
+            <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                За розкладом у всіх дітей 3 години прогулянок. Ми гуляємо практично за будь-якої погоди, бо маємо велику альтанку у дворі.
+                </div>
+            </div>
+            </div>
+
+            <!-- Additional Questions (continue the same pattern) -->
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(6)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Де гуляють діти?</span>
+                    <span id="icon-6" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-5 text-sm text-slate-500">
+                        Ми маємо затишну, закриту територію, яка облаштована ігровими зонами і обладнана системою відеоспостереження.
+                    </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(7)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Яке харчування у дітей?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Протягом дня діти отримують пʼятиразове збалансоване харчування. Щоденно в меню є фрукти і овочі по сезону.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(8)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Чи є в садочку денний відпочинок?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-8" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    У дітей всіх вікових категорій є денний відпочинок. Кімнати обладнані ліжечками Монтессорі на яких діткам зручно спати бо вони низенькі і легкі. Тому діти без сторонньої допомоги можуть лягати на ліжко і вставати з нього.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(9)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Що діти роблять під час повітряної тривоги?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-9" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Ми маємо сертифіковане укриття, яке розташоване на відстані 50м. Там в нас затишне, світле і тепле приміщення з усіма зручностями, де дітки можуть гратися і займатись з вихователями, а за потреби їх там можна навіть погодувати.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(10)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Чи кваліфікований персонал у закладі?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-10" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Всі працівники мають відповідну педагогічну освіту і досвід роботи. Крім того процес контролюється методистом.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(11)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Як батьки можуть побачити результати навчання дитини?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-11" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    В нашому закладі запроваджена система діагностики навчання, розвитку і відповідності віковим нормам дитини три рази на рік (на початку навчального року, в середині і в кінці). Результати діагностики з поясненнями в зведеному вигляді передаються батькам. 
+Крім того батьки мають змогу отримати інформацію по дню та відповіді на всі питання які виникають щодня від вихователя зранку або ввечері, а також поспілкуватись з методистом за потреби.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(12)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Який режим роботи?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-12" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Заклад працює з 8:30 до 18:30
+                    Діти можуть бути з нами пів дня  до 13:30 або повний день до 18:30.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(13)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Розкажіть детальніше про розклад дня?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-13" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Зранку обов’язкова ранкова зарядка і ранкове коло де діти налаштовуються на роботу 
+                    Щоденно у дітей 5 занять по 30 хвилин і 3 години прогулянок
+                    Денний відпочинок 2 години з 13:30 до 15:30, а у найменших 3 години з 12:30
+                    Протягом дня пʼятиразове харчування (сніданок, фрукти, обід, вечеря і підвечірок).
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(14)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Як забезпечується безпека дітей?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-14" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    На випадок повітряної тривоги маємо сертифіковане укриття. 
+                    Всі приміщення, територія і парковка оснащені системою відеоспостереження 
+                    Іграшки, меблі ергономічні і безпечні для дітей 
+                    Групи обладнані бактерицидними рециркуляторами
+                    Проводиться щоденне вологе прибирання 
+                    Щотижня всі іграшки миються дезінфікуючими засобами 
+                    Весь персонал має санітарні книжки і регулярно проходить медичний огляд
+                    Проводяться всі заходи згідно санітарного регламенту.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(15)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Де ви знаходитесь і як до вас дістатись?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-15" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Ми знаходимось в центрі міста за адресою бульвар Лесі Українки,17 
+                    До нас зручно дістатись як громадським транспортом так автомобілем. Біля нас є парковка.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(16)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Яка вартість абонементу в садочок?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-16" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Ми підготували для батьків декілька пропозицій від 4100 грн. Можемо запропонувати відвідування щоденно з понеділка по пʼятницю повний день або до обіду. Також є варіант, який підійде батькам, що не розглядають щоденне відвідування, це три рази на тиждень , всього 14 днів на місяць.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(17)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Чи є адаптаційний період, чи 
+                        потрібно одразу купувати абонемент?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-17" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Так, на період адаптації ми пропонуємо тижневий абонемент по спеціальній вартості.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(18)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>
+                        Чи є адаптаційний період, чи 
+                        потрібно одразу купувати абонемент?</span>
+                    <span id="icon-7" class="text-slate-800 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </span>
+                </button>
+                <div id="content-18" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                    Багато уваги ми приділяємо розвитку мовлення. В розкладі на кожен вік є відповідний курс.
+Крім того в нашому закладі працює досвідчений логопед-дефектолог , який додатково, за потреби, в той час коли дитина в садочку, займається з дітьми. Для наших вихованців діє спеціальна ціна. Це суттєва економія часу для працюючих батьків.
+                </div>
+            </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(19)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>З якого віку ви приймаєте дітей?</span>
+                    <span id="icon-19" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-19" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-5 text-sm text-slate-500">
+                        Ми працюємо з дітками з 2х років.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(20)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>Моя дитина ще в памперсі, ви приймаєте таких?</span>
+                    <span id="icon-20" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-20" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-5 text-sm text-slate-500">
+                        Так, наші помічники дбайливо проконтролюють і поміняють памперс дитині. І відповідно будемо разом з батьками вчити користуватись горщиком.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(21)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>Чи вивчається в садочку іноземна мова?</span>
+                    <span id="icon-21" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-21" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-5 text-sm text-slate-500">
+                        Так, у діток з 3х років є вивчення англійської мови.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(22)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>Як проходять заняття?</span>
+                    <span id="icon-21" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-22" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-5 text-sm text-slate-500">
+                        Всі заняття проходять в ігровій формі. Багато уваги приділяємо нейровправам, що позитивно впливає на результат навчання.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+
+
+
+    <!-- Ціна -->
 
     <section id="Price" style="margin-top: 10%;" data-aos="fade-up">
         <div class="flex justify-center">
@@ -276,30 +743,27 @@
                         </button>
                     </div>
                 </div>
-                <!-- Кнопка зі знижкою на перше заняття -->
+                
             </div>
             <div class="container-md flex flex-col items-center mt-12">
                 <h1 class="text-2xl font-bold mb-4 text-center">
                     Пробний день
                 </h1>
-                <a href="#discount" class="px-8 py-3 bg-[#720bc4] text-white font-bold rounded-full shadow-lg hover:bg-[#5a14a2] transition duration-300 ease-in-out flex items-center justify-center">
+                <a href="#Contact" class="px-8 py-3 bg-[#720bc4] text-white font-bold rounded-full shadow-lg hover:bg-[#5a14a2] transition duration-300 ease-in-out flex items-center justify-center">
                     <span class="line-through text-gray-300 text-xl">260грн</span>
                     <span class="ml-4 text-2xl font-semibold">50грн</span>
                 </a>
             </div>
-            
-            
-
         </div>
     </section>
     
 
     <!-- Contact -->
-    <section id="Contact" class=" py-12" style="margin-top: 10%; margin-bottom: 10%;" data-aos="fade-up">
+    <section id="Contact" class="py-12" style="margin-top: 10%; margin-bottom: 10%;" data-aos="fade-up">
         <div class="container mx-auto max-w-lg px-4">
             <h2 class="text-3xl font-bold text-center mb-6">Зв'язатися з нами</h2>
-            <h3 class="text-xl italic text-center mb-6">Ми подаруємо Вашій дитині щасливе та пізнавальне дозвілля</i></h3>
-            <form class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl italic text-center mb-6">Ми подаруємо Вашій дитині щасливе та пізнавальне дозвілля</h3>
+            <form id="contactForm" class="bg-white p-6 rounded-lg shadow-md">
                 <!-- Ім'я -->
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Ім'я</label>
@@ -314,6 +778,27 @@
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" 
                         placeholder="+380 123 456 789" required>
                 </div>
+                <!-- Вік дитини -->
+                <div class="mb-4">
+                    <label for="childAge" class="block text-sm font-medium text-gray-700 mb-2">Вік дитини</label>
+                    <input type="number" id="childAge" name="childAge" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" 
+                        placeholder="Вкажіть вік дитини" required>
+                </div>
+                <!-- Ім'я дитини -->
+                <div class="mb-4">
+                    <label for="childName" class="block text-sm font-medium text-gray-700 mb-2">Ім'я дитини</label>
+                    <input type="text" id="childName" name="childName" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" 
+                        placeholder="Ім'я дитини" required>
+                </div>
+                <!-- Питання -->
+                <div class="mb-4">
+                    <label for="question" class="block text-sm font-medium text-gray-700 mb-2">Питання</label>
+                    <textarea id="question" name="question" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" 
+                        placeholder="Ваше питання"></textarea>
+                </div>
                 <!-- Кнопка відправлення -->
                 <button type="submit" 
                     class="w-full bg-[#720bc4] text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400">
@@ -322,7 +807,6 @@
             </form>
         </div>
     </section>
-
 
     <!-- Footer -->
 <footer class="bg-gradient-to-r from-[#321fb2] to-[#720bc4] rounded-t-3xl py-12">
@@ -382,39 +866,92 @@
 
     <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.4.4/dist/flowbite.js"></script>
+    <script src="main.js"></script>
     <script>
-         // JavaScript для бургер-меню
-        const burgerButton = document.getElementById('burgerButton');
-        const burgerMenu = document.getElementById('burgerMenu');
+        
+    // Бургер-меню
+    const burgerButton = document.getElementById('burgerButton');
+    const burgerMenu = document.getElementById('burgerMenu');
+    
+    burgerButton.addEventListener('click', () => {
+        burgerMenu.classList.toggle('hidden');
+    });
 
-        burgerButton.addEventListener('click', () => {
-            burgerMenu.classList.toggle('hidden');
-        });
-        AOS.init({
-            duration: 1000, // тривалість анімації
-            easing: 'ease-in-out', // плавність анімації
-            once: true, // анімація відбувається тільки один раз
-        });
+    // Ініціалізація AOS (анімування елементів при прокручуванні)
+    AOS.init({
+        duration: 1000, // тривалість анімації
+        easing: 'ease-in-out', // плавність анімації
+        once: true, // анімація відбувається тільки один раз
+    });
 
-        const button = document.querySelector('#colorButton');
-        const body = document.body;
+    // Кнопка зміни теми
+    const button = document.querySelector('#colorButton');
+    const body = document.body;
 
-        button.addEventListener('click', () => {
-            body.classList.toggle('bg-[#1F1F1F]');
-            body.classList.toggle('text-white');
-            body.classList.toggle('bg-white');
-            body.classList.toggle('text-black');
-            
-            // Зміна іконки
-            const icon = button.querySelector('i');
-            if (body.classList.contains('bg-gray-900')) {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            } else {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            }
-        });
+    button.addEventListener('click', () => {
+        body.classList.toggle('bg-[#1F1F1F]');
+        body.classList.toggle('text-white');
+        body.classList.toggle('bg-white');
+        body.classList.toggle('text-black');
+        
+        // Зміна іконки
+        const icon = button.querySelector('i');
+        if (body.classList.contains('bg-[#1F1F1F]')) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+    });
+
+        function toggleAccordion(index) {
+        const content = document.getElementById(`content-${index}`);
+        const icon = document.getElementById(`icon-${index}`);
+    
+        // SVG for Down icon
+        const downSVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+        </svg>
+        `;
+    
+        // SVG for Up icon
+        const upSVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+        `;
+    
+        // Toggle the content's max-height for smooth opening and closing
+        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = '0';
+        icon.innerHTML = upSVG;
+        } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.innerHTML = downSVG;
+        }
+    }
+    function toggleAccordion(id) {
+    const content = document.getElementById(`content-${id}`);
+    const icon = document.getElementById(`icon-${id}`);
+
+    if (content.classList.contains('max-h-0')) {
+        // Open the accordion
+        content.classList.remove('max-h-0');
+        content.classList.add('max-h-[1000px]'); // Set a large enough value to allow scrolling
+        icon.style.transform = 'rotate(180deg)'; // Rotate the icon when open
+    } else {
+        // Close the accordion
+        content.classList.remove('max-h-[1000px]');
+        content.classList.add('max-h-0');
+        icon.style.transform = 'rotate(0deg)'; // Reset the icon rotation when closed
+    }
+}
+
+
+
     </script>
 </body>
 </html>
