@@ -40,25 +40,45 @@ document.getElementById('contactForm').addEventListener('submit', async function
     }
 });
 
-// Слайдер
+// Текстовий слайдер (відгуки)
+const textSlider = document.getElementById('textSlider');
+const prevTextButton = document.getElementById('prevText');
+const nextTextButton = document.getElementById('nextText');
+let currentTextIndex = 0;
+const textSlides = textSlider.children;
 
-const slider = document.getElementById('slider');
-const slides = slider.children;
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-
-let currentIndex = 0;
-
-function updateSlider() {
-  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+function updateTextSlider() {
+  textSlider.style.transform = `translateX(-${currentTextIndex * 100}%)`;
 }
 
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-  updateSlider();
+prevTextButton.addEventListener('click', () => {
+  currentTextIndex = (currentTextIndex > 0) ? currentTextIndex - 1 : textSlides.length - 1;
+  updateTextSlider();
 });
 
-nextButton.addEventListener('click', () => {
-  currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-  updateSlider();
+nextTextButton.addEventListener('click', () => {
+  currentTextIndex = (currentTextIndex < textSlides.length - 1) ? currentTextIndex + 1 : 0;
+  updateTextSlider();
+});
+
+
+// Слайдер зображень
+const imageSlider = document.getElementById('imageSlider');
+const prevImageButton = document.getElementById('prevImage');
+const nextImageButton = document.getElementById('nextImage');
+let currentImageIndex = 0;
+const imageSlides = imageSlider.children;
+
+function updateImageSlider() {
+  imageSlider.style.transform = `translateX(-${currentImageIndex * 100}%)`;
+}
+
+prevImageButton.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : imageSlides.length - 1;
+  updateImageSlider();
+});
+
+nextImageButton.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex < imageSlides.length - 1) ? currentImageIndex + 1 : 0;
+  updateImageSlider();
 });
