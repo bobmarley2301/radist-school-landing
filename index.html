@@ -143,28 +143,31 @@
     <div class="container mx-auto px-4 mt-16 lg:mt-24" data-aos="fade-up">
         <div>
             <p>
-                <span class="text-[#720bc4] text-3xl lg:text-4xl font-bold">Садок «Радість»</span>
-                <span class="text-xl lg:text-2xl font-semibold block mt-2">
+                <span class="text-[#720bc4] text-2xl sm:text-3xl lg:text-4xl font-bold block text-center lg:text-left">
+                    Садок «Радість»
+                </span>
+                <span class="text-base sm:text-lg lg:text-xl font-semibold block mt-2 text-center lg:text-left">
                     — це місце, де ваша дитина почне свою освітню подорож з упевненістю в собі.
                 </span>
             </p>
         </div>
         <div class="flex justify-center lg:justify-end mt-6">
-            <p class="text-lg lg:text-xl italic text-center lg:text-left">
+            <p class="text-sm sm:text-base lg:text-lg italic text-center lg:text-left">
                 "Ми віримо у потужність співпраці та відкритого спілкування.<br> Ми прагнемо створити партнерські відносини з батьками,<br>щоб спільно працювати над розвитком та навчанням дітей.<br>Ми розуміємо, що кожен успіх дитини залежить від нашої спільної роботи та взаєморозуміння."
             </p>
         </div>
     </div>
     <div class="container-md flex flex-col items-center mt-12" data-aos="fade-up">
-            <h1 class="text-2xl font-bold mb-4 text-center">
-                Пробний день
-            </h1>
-            <a href="#Contact" class="px-8 py-3 bg-[#720bc4] text-white font-bold rounded-full shadow-lg hover:bg-[#5a14a2] transition duration-300 ease-in-out flex items-center justify-center" >
-                <span class="line-through text-gray-300 text-xl">260грн</span>
-                <span class="ml-4 text-2xl font-semibold">50грн</span>
-            </a>
+        <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-center">
+            Пробний день
+        </h1>
+        <a href="#Contact" class="px-6 sm:px-8 py-2 sm:py-3 bg-[#720bc4] text-white font-bold rounded-full shadow-lg hover:bg-[#5a14a2] transition duration-300 ease-in-out flex items-center justify-center text-center">
+            <span class="line-through text-gray-300 text-lg sm:text-xl">260грн</span>
+            <span class="ml-2 sm:ml-4 text-xl sm:text-2xl font-semibold">50грн</span>
+        </a>
     </div>
 </section>
+
 
 
 
@@ -241,9 +244,17 @@
                     <span class="ml-4 text-2xl font-semibold">50грн</span>
                 </a>
             </div>
-              <div style="margin-top: 10%;" data-aos="fade-up">
-                    <h1 style="font-size: 36px;"><span class="rounded rounded-lg" style="font-size: 56px ; color: #720bc4;">Дитячий центр «Радість» </span>є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів</h1>
-              </div>
+            <div class="mt-10" data-aos="fade-up">
+                <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center lg:text-left font-medium">
+                    <span 
+                        class="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#720bc4] bg-gray-100 rounded-lg p-2"
+                    >
+                        Дитячий центр «Радість»
+                    </span>
+                    є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів
+                </h1>
+            </div>
+            
         </div>
     </section>
 
@@ -756,6 +767,39 @@
             </div>
         </div>
     </section>
+
+
+
+    <!-- Відгуки слайдер -->
+    <div class="container mx-auto" style="margin-top: 10%;">
+        <div class="relative w-full max-w-3xl mx-auto overflow-hidden bg-white rounded-lg shadow-lg">
+            <div class="flex transition-transform duration-500 ease-in-out" id="slider">
+            <div class="flex-shrink-0 w-full p-8 text-center">
+                <p class="text-lg italic text-gray-600">"Відмінний сервіс! Дуже задоволений результатом."</p>
+                <h4 class="mt-4 text-xl font-semibold text-gray-800">- Олександр</h4>
+            </div>
+            <div class="flex-shrink-0 w-full p-8 text-center">
+                <p class="text-lg italic text-gray-600">"Все на вищому рівні! Рекомендую всім."</p>
+                <h4 class="mt-4 text-xl font-semibold text-gray-800">- Марія</h4>
+            </div>
+            <div class="flex-shrink-0 w-full p-8 text-center">
+                <p class="text-lg italic text-gray-600">"Швидко, якісно та доступно. Дякую за чудову роботу!"</p>
+                <h4 class="mt-4 text-xl font-semibold text-gray-800">- Дмитро</h4>
+            </div>
+            </div>
+            <button 
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#C479E6] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-[#a761d4]" 
+            id="prev">
+            ❮
+            </button>
+            <button 
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#C479E6] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-[#a761d4]" 
+            id="next">
+            ❯
+            </button>
+        </div>      
+    </div>
+    
     
 
     <!-- Contact -->
