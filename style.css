@@ -9,3 +9,7 @@
     opacity: 1;
     max-height: 500px; /* Ви можете налаштувати це під свій контент */
 }
+
+.font-bring { 
+    font-size: 18px;
+}
