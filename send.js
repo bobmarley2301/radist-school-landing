@@ -1,17 +1,17 @@
-const token = 'YOUR_TELEGRAM_BOT_TOKEN';  // Заміни на токен свого бота
-const chatId = 'YOUR_TELEGRAM_CHAT_ID';   // Заміни на свій Chat ID
+const token = '7956466370:AAGVoHPJjWMx6XVfc8owmwambzBHz-m-EbE';
+const chatId = '5228123933';
 
 document.getElementById('contactForm').addEventListener('submit', function (event) {
-event.preventDefault(); // Запобігає перезавантаженню сторінки
+event.preventDefault();
 
-            // Отримання значень з форми
+
 const name = document.getElementById('name').value;
 const phone = document.getElementById('phone').value;
 const childAge = document.getElementById('childAge').value;
 const childName = document.getElementById('childName').value;
 const question = document.getElementById('question').value;
 
-// Формування повідомлення
+
 const message = `
     🔔 Нова заявка на сайті! 🔔\n
     👤 Ім'я: ${name}\n
@@ -21,7 +21,7 @@ const message = `
     ❓ Питання: ${question}
 `;
 
-// Надсилання повідомлення через Telegram API
+
 axios.get(`https://api.telegram.org/bot${token}/sendMessage`, {
     params: {
         chat_id: chatId,
@@ -31,7 +31,7 @@ axios.get(`https://api.telegram.org/bot${token}/sendMessage`, {
     })
             .then(response => {
                 alert('Повідомлення успішно надіслано!');
-                document.getElementById('contactForm').reset(); // Очищення форми
+                document.getElementById('contactForm').reset(); 
             })
             .catch(error => {
                 console.error('Помилка при надсиланні повідомлення:', error);
