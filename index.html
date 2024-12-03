@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/assets/logo.PNG" type="image/x-icon">
@@ -111,6 +115,7 @@
 
 
 <!-- Hero -->
+
 <section id="hero" class="bg-cover bg-center h-screen relative" style="background-image: url('assets/hero.jpg');">
     <div class="container mx-auto flex flex-col lg:flex-row justify-center items-center h-full relative z-10" data-aos="fade-in" data-aos-delay="600">
         <!-- Текстовий блок -->
@@ -119,9 +124,18 @@
             <p class="text-lg lg:text-xl mt-4 bg-[#1fb232] text-white py-4 px-6 rounded font-bold">
                 Відчуйте турботу, затишок і розвиток у дії – перш ніж приймати рішення!
             </p>
+            <div class="text-center mt-16">
+                <h1 class="text-2xl font-bold mb-4">Пробний день</h1>
+                <a href="https://secure.wayforpay.com/button/b3e9eba3b0834" class="px-8 py-3 bg-[#1fb232] text-white font-bold rounded-full shadow-lg hover:bg-[#17a32f] transition duration-300 ease-in-out inline-flex items-center justify-center animate__animated animate__wobble">
+                    <span class="line-through text-gray-300 text-xl">260грн</span>
+                    <span class="ml-4 text-2xl font-semibold">50грн</span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
+
+
 
 
 
@@ -138,9 +152,6 @@
                 — це найкраще рішення для соціалізації та розвитку дитини.
             </h2>
         </header>
-        <p class="mt-4 text-center lg:text-left text-gray-700">
-            Дитячий садок «Радість» є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів.
-        </p>
     </div>
 
     <div class="container mx-auto px-4 mt-8 lg:mt-12" data-aos="fade-up">
@@ -281,15 +292,11 @@
 
         
         
-        <!-- Додатковий текст -->
-        <div class="mt-12 text-center" data-aos="fade-up">
-            <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
-                <span class="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#720bc4] rounded-lg p-2">
-                    Приватний садочок для вашої дитини
-                </span>
-                який забезпечує турботу, знання та комфорт для щасливого дитинства.
-            </h1>
-        </div>
+        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mt-12     mb-12">
+            <span class="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#720bc4] rounded-lg p-2">
+                Дитячий садок «Радість» є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів.
+            </span>
+        </h1>             
     </div>
 </section>
 
@@ -306,7 +313,7 @@
             <h1>Відповіді на питання:</h1>
         </div>
         <div class="border-b border-slate-200">
-            <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+            <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                 <span>🤔 Розкажіть детальніше про вашу програму</span>
                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10 bg-purple-500 p-1 rounded">
@@ -339,7 +346,7 @@
             </div>
         
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Чи достатньо діти гуляють на вулиці?</span>
                     <span id="icon-5" class="text-slate-800 transition-transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10 bg-purple-500 p-1 rounded">
@@ -356,7 +363,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(7)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(7)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Яке харчування у дітей?</span>
                     <span id="icon-7" class="text-slate-800 transition-transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10 bg-purple-500 p-1 rounded">
@@ -372,7 +379,7 @@
             </div>
             
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(8)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(8)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Чи є в садочку денний відпочинок?</span>
                     <span id="icon-8" class="text-slate-800 transition-transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10 bg-purple-500 p-1 rounded">
@@ -388,7 +395,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(9)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(9)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Що діти роблять під час повітряної тривоги?</span>
                     <span id="icon-9" class="text-slate-800 transition-transform duration-300">
@@ -405,7 +412,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(10)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(10)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Чи кваліфікований персонал у закладі?</span>
                     <span id="icon-10" class="text-slate-800 transition-transform duration-300">
@@ -422,7 +429,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(11)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(11)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Як батьки можуть побачити результати навчання дитини?</span>
                     <span id="icon-11" class="text-slate-800 transition-transform duration-300">
@@ -440,7 +447,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(12)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(12)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Який режим роботи?</span>
                     <span id="icon-12" class="text-slate-800 transition-transform duration-300">
@@ -458,7 +465,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(13)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(13)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Розкажіть детальніше про розклад дня?</span>
                     <span id="icon-13" class="text-slate-800 transition-transform duration-300">
@@ -478,7 +485,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(14)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(14)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Як забезпечується безпека дітей?</span>
                     <span id="icon-14" class="text-slate-800 transition-transform duration-300">
@@ -502,7 +509,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(15)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(15)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Де ви знаходитесь і як до вас дістатись?</span>
                     <span id="icon-15" class="text-slate-800 transition-transform duration-300">
@@ -520,7 +527,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(16)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(16)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Яка вартість абонементу в садочок?</span>
                     <span id="icon-16" class="text-slate-800 transition-transform duration-300">
@@ -538,7 +545,7 @@
 
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(18)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(18)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Чи є адаптаційний період, чи 
                         потрібно одразу купувати абонемент?</span>
@@ -556,7 +563,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(19)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(19)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 З якого віку ви приймаєте дітей?</span>
                     <span id="icon-19" class="text-slate-800 transition-transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10 bg-purple-500 p-1 rounded">
@@ -572,7 +579,7 @@
             </div>
             
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(20)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(20)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Моя дитина ще в памперсі, ви приймаєте таких?</span>
                     <span id="icon-20" class="text-slate-800 transition-transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10 bg-purple-500 p-1 rounded">
@@ -588,7 +595,7 @@
             </div>
             
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(21)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(21)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Чи вивчається в садочку іноземна мова?</span>
                     <span id="icon-21" class="text-slate-800 transition-transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10 bg-purple-500 p-1 rounded">
@@ -604,7 +611,7 @@
             </div>
 
             <div class="border-b border-slate-200">
-                <button onclick="toggleAccordion(22)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <button onclick="toggleAccordion(22)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Як проходять заняття?</span>
                     <span id="icon-22" class="text-slate-800 transition-transform duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-10 h-10 bg-purple-500 p-1 rounded">
