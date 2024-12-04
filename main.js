@@ -20,7 +20,7 @@ nextTextButton.addEventListener('click', () => {
 });
 
 
-// Слайдер зображень
+
 const imageSlider = document.getElementById('imageSlider');
 const prevImageButton = document.getElementById('prevImage');
 const nextImageButton = document.getElementById('nextImage');

@@ -53,63 +53,63 @@
 <body class="bg-[#E9E1F5] text-black" style='font-family: "Montserrat", sans-serif;'>
 
    <!-- НАВБАР -->
-<nav class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="200">
-    <div class="container mx-auto flex justify-between items-center p-4">
-        <!-- Логотип -->
-        <a href="#hero" class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="300">
-            <img src="assets/logo.PNG" alt="Logo" class="w-32 h-auto">
-        </a>
+    <nav class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="200">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <!-- Логотип -->
+            <a href="#hero" class="animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="300">
+                <img src="assets/logo.PNG" alt="Logo" class="w-32 h-auto">
+            </a>
+
+            <!-- Бургер-меню (при маленьких екранах) -->
+            <div class="block lg:hidden">
+                <button id="burgerButton" class="text-black p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Меню (для великих екранів) -->
+            <ul class="hidden lg:flex space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="400">
+                <li>
+                    <a href="#About" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Про нас</a>
+                </li>
+                <li>
+                    <a href="#Advantages" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Наші переваги</a>
+                </li>
+                <li>
+                    <a href="#Question" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Відповіді на питання</a>
+                </li>
+                <li>
+                    <a href="#Contact" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Контакти</a>
+                </li>
+            </ul>
+
+            <!-- Кнопки -->
+            <div class="flex items-center space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="500">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/radist_sadochok_kolomyia" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                    <i class="fa-brands fa-instagram text-3xl"></i>
+                </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@sadochok_radist" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                    <i class="fa-brands fa-tiktok text-3xl"></i>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/RadistSadochokKolomiya" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                    <i class="fa-brands fa-facebook text-3xl"></i>
+                </a>
+            </div>
+        </div>
 
         <!-- Бургер-меню (при маленьких екранах) -->
-        <div class="block lg:hidden">
-            <button id="burgerButton" class="text-black p-2">
-                <i class="fas fa-bars"></i>
-            </button>
+        <div id="burgerMenu" class="lg:hidden hidden bg-[#321fb2] w-full p-4">
+            <ul class="space-y-4 text-white">
+                <li><a href="#About" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Про нас</a></li>
+                <li><a href="#Advantages" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Наші переваги</a></li>
+                <li><a href="#Price" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Ціни</a></li>
+                <li><a href="#Contact" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Контакти</a></li>
+            </ul>
         </div>
-
-        <!-- Меню (для великих екранів) -->
-        <ul class="hidden lg:flex space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="400">
-            <li>
-                <a href="#About" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Про нас</a>
-            </li>
-            <li>
-                <a href="#Advantages" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Наші переваги</a>
-            </li>
-            <li>
-                <a href="#Question" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Відповіді на питання</a>
-            </li>
-            <li>
-                <a href="#Contact" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">Контакти</a>
-            </li>
-        </ul>
-
-        <!-- Кнопки -->
-        <div class="flex items-center space-x-4 animate__animated animate__fadeIn" data-aos="fade-in" data-aos-delay="500">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/radist_sadochok_kolomyia" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                <i class="fa-brands fa-instagram text-3xl"></i>
-            </a>
-            <!-- TikTok -->
-            <a href="https://www.tiktok.com/@sadochok_radist" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                <i class="fa-brands fa-tiktok text-3xl"></i>
-            </a>
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/RadistSadochokKolomiya" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                <i class="fa-brands fa-facebook text-3xl"></i>
-            </a>
-        </div>
-    </div>
-
-    <!-- Бургер-меню (при маленьких екранах) -->
-    <div id="burgerMenu" class="lg:hidden hidden bg-[#321fb2] w-full p-4">
-        <ul class="space-y-4 text-white">
-            <li><a href="#About" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Про нас</a></li>
-            <li><a href="#Advantages" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Наші переваги</a></li>
-            <li><a href="#Price" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Ціни</a></li>
-            <li><a href="#Contact" class="block px-3 py-2 rounded hover:bg-[#720bc4]">Контакти</a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
 
 
 
@@ -182,7 +182,7 @@
 
 
 
-<!-- Переваги -->
+
 <!-- Переваги -->
 <section id="Advantages" class="py-16 bg-[#F4F0FA]">
     <div class="container mx-auto px-4" data-aos="fade-up">
@@ -292,16 +292,13 @@
 
         
         
-        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mt-12     mb-12">
-            <span class="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#720bc4] rounded-lg p-2">
+        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mt-12 mb-12">
+            <span class="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#720bc4] rounded-lg p-2">
                 Дитячий садок «Радість» є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів.
             </span>
-        </h1>             
+        </h1>           
     </div>
 </section>
-
-
-
 
 
 
@@ -309,10 +306,10 @@
 
 
     <div id="Question" class="container mx-auto" style="padding: 2%;"  data-aos="fade-up">
-        <div class="text-center font-bold" style="font-size: 52px; margin-top: 10%; margin-bottom: 5%;">
-            <h1>Відповіді на питання:</h1>
+        <div class="text-center font-bold" style="font-size: 38px; margin-top: 10%; margin-bottom: 5%;">
+            <h1>Відповіді на питання</h1>
         </div>
-        <div class="border-b border-slate-200">
+        <div class="border-b border-slate-200" style="font-size: 18px;">
             <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                 <span>🤔 Розкажіть детальніше про вашу програму</span>
                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
@@ -345,7 +342,7 @@
                 </div>
             </div>
         
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Чи достатньо діти гуляють на вулиці?</span>
                     <span id="icon-5" class="text-slate-800 transition-transform duration-300">
@@ -362,7 +359,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(7)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Яке харчування у дітей?</span>
                     <span id="icon-7" class="text-slate-800 transition-transform duration-300">
@@ -378,7 +375,7 @@
                 </div>
             </div>
             
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(8)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Чи є в садочку денний відпочинок?</span>
                     <span id="icon-8" class="text-slate-800 transition-transform duration-300">
@@ -394,7 +391,7 @@
                 </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(9)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Що діти роблять під час повітряної тривоги?</span>
@@ -411,7 +408,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(10)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Чи кваліфікований персонал у закладі?</span>
@@ -428,7 +425,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(11)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Як батьки можуть побачити результати навчання дитини?</span>
@@ -446,7 +443,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(12)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Який режим роботи?</span>
@@ -464,7 +461,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(13)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Розкажіть детальніше про розклад дня?</span>
@@ -484,7 +481,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(14)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Як забезпечується безпека дітей?</span>
@@ -508,7 +505,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(15)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Де ви знаходитесь і як до вас дістатись?</span>
@@ -526,7 +523,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(16)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Яка вартість абонементу в садочок?</span>
@@ -544,7 +541,7 @@
             </div>
 
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(18)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>
                         🤔 Чи є адаптаційний період, чи 
@@ -562,7 +559,7 @@
             </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(19)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 З якого віку ви приймаєте дітей?</span>
                     <span id="icon-19" class="text-slate-800 transition-transform duration-300">
@@ -578,7 +575,7 @@
                 </div>
             </div>
             
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(20)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Моя дитина ще в памперсі, ви приймаєте таких?</span>
                     <span id="icon-20" class="text-slate-800 transition-transform duration-300">
@@ -594,7 +591,7 @@
                 </div>
             </div>
             
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(21)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Чи вивчається в садочку іноземна мова?</span>
                     <span id="icon-21" class="text-slate-800 transition-transform duration-300">
@@ -610,7 +607,7 @@
                 </div>
             </div>
 
-            <div class="border-b border-slate-200">
+            <div class="border-b border-slate-200" style="font-size: 18px;">
                 <button onclick="toggleAccordion(22)" class="w-full flex justify-between items-center py-5 text-slate-800 text-left">
                     <span>🤔 Як проходять заняття?</span>
                     <span id="icon-22" class="text-slate-800 transition-transform duration-300">
@@ -640,7 +637,7 @@
     <!-- Навчитесь -->
     <div class="bg-gray-100 py-12" data-aos="fade-up">
         <div class="max-w-7xl mx-auto text-center" style="margin-top: 10%; margin-bottom: 10%;">
-            <h2 class="text-3xl font-bold mb-8">Діти в "Радості":</h2>
+            <h2 class="font-bold mb-8" style="font-size: 38px;">Діти в "Радості"</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- НАВЧАТЬСЯ -->
                 <div class="bg-white shadow-lg rounded-lg p-6 mb-6 hover:shadow-2xl hover:translate-y-2 transition-all duration-300">
@@ -838,43 +835,75 @@
     </div>
 </section>
 
-    <footer class="bg-gradient-to-r from-[#321fb2] to-[#720bc4] rounded-t-3xl py-12">
-        <div class="container mx-auto text-white">
-            <!-- Main footer content -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
-                <!-- About Us Section -->
-                <div class="text-center">
-                    <h3 class="text-xl font-semibold mb-4">Про нас</h3>
-                    <p>Приватний садок «Радість» пропонує найкраще для ваших дітей.</p>
-                </div>
-                <!-- Useful Links Section -->
-                <div class="text-center">
-                    <h3 class="text-xl font-semibold mb-4">Корисні посилання</h3>
-                    <ul>
-                        <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Головна</a></li>
-                        <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Наші послуги</a></li>
-                        <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Контакти</a></li>
-                        <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Блог</a></li>
-                    </ul>
-                </div>
+<footer class="bg-gradient-to-r from-[#321fb2] to-[#720bc4] rounded-t-3xl py-12">
+    <div class="container mx-auto text-white">
+        <!-- Main footer content -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+            <!-- About Us Section -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-4">Про нас</h3>
+                <p>Приватний садок «Радість» пропонує найкраще для ваших дітей.</p>
             </div>
-    
-            <!-- Bottom footer -->
-            <div class="text-center mt-8">
-                <p>© 2022 Приватний садок «Радість». Всі права захищені.</p>
-                <p>
-                    Designed by 
-                    <a href="https://www.instagram.com/__pedelo__/ 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="text-[#f8f8f8] font-bold hover:text-[#720bc4]">
-                        __pedelo__
+
+            <!-- Useful Links Section -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-4">Корисні посилання</h3>
+                <ul>
+                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Головна</a></li>
+                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Наші послуги</a></li>
+                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Контакти</a></li>
+                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Блог</a></li>
+                </ul>
+            </div>
+
+            <!-- Navigation Links Section -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-4">Навігація</h3>
+                <ul>
+                    <li><a href="#About" class="text-[#f8f8f8] hover:text-[#720bc4]">Про нас</a></li>
+                    <li><a href="#Advantages" class="text-[#f8f8f8] hover:text-[#720bc4]">Наші переваги</a></li>
+                    <li><a href="#Question" class="text-[#f8f8f8] hover:text-[#720bc4]">Відповіді на питання</a></li>
+                    <li><a href="#Contact" class="text-[#f8f8f8] hover:text-[#720bc4]">Контакти</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-4">Ми в соцмережах</h3>
+                <div class="flex justify-center space-x-4">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/radist_sadochok_kolomyia" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                        <i class="fa-brands fa-instagram text-3xl"></i>
                     </a>
-                </p>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@sadochok_radist" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                        <i class="fa-brands fa-tiktok text-3xl"></i>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/RadistSadochokKolomiya" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                        <i class="fa-brands fa-facebook text-3xl"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </footer>
-    
+
+        <!-- Bottom footer -->
+        <div class="text-center mt-8">
+            <p>© 2022 Приватний садок «Радість». Всі права захищені.</p>
+            <p>
+                Designed by 
+                <a href="https://www.instagram.com/__pedelo__" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="text-[#f8f8f8] font-bold hover:text-[#720bc4]">
+                    __pedelo__
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
     
     
 
@@ -1002,7 +1031,7 @@
             document.getElementById('contactForm').reset();
         })
         .catch(error => {
-            console.error('Помилка при надсиланні повідомлення:', error);
+            console.error('Помилка при надсиланні повідомлення:');
             alert('Сталася помилка. Спробуйте ще раз.');
         });
     });
