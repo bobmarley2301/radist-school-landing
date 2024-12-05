@@ -292,11 +292,28 @@
 
         
         
-        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mt-12 mb-12">
-            <span class="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#720bc4] rounded-lg p-2">
-                Дитячий садок «Радість» є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів.
+        <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mt-8 mb-8 flex flex-col sm:flex-row items-start sm:items-center">
+            <!-- SVG Quote Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40" 
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#720bc4"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="opacity-100 mb-2 sm:mb-0 sm:mr-3"
+            >
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+            </svg>
+          
+            <span class="block text-center sm:text-left text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#720bc4] rounded-lg p-2">
+              Дитячий садок «Радість» є дійсним членом Всеукраїнського об'єднання приватних дитячих закладів.
             </span>
-        </h1>           
+        </h1>                         
     </div>
 </section>
 
@@ -1028,10 +1045,12 @@
         })
         .then(response => {
             alert('Повідомлення успішно надіслано!');
+            console.log('Повідомлення успішно надіслано:', response);
             document.getElementById('contactForm').reset();
         })
         .catch(error => {
             console.error('Помилка при надсиланні повідомлення:');
+            console.error(error," Помилка при надсиланні повідомлення");
             alert('Сталася помилка. Спробуйте ще раз.');
         });
     });
@@ -1042,3 +1061,4 @@
 
 </body>
 </html>
+ 
