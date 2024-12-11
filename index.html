@@ -814,111 +814,129 @@
     
 
     <!-- Contact Section -->
-<section id="Contact" class="py-12" style="margin-top: 10%; margin-bottom: 10%;" data-aos="fade-up">
-    <div class="container mx-auto max-w-lg px-4">
-        <h2 class="text-3xl font-bold text-center mb-6">Залишились питання? Записатись на екскурсію?</h2>
-        <h3 class="text-xl italic text-center mb-6">Заповніть форму і ми з вами зв'яжемось в найкоротший термін</h3>
-        <form id="contactForm" class="bg-white p-6 rounded-lg shadow-md">
-            <!-- Ім'я -->
-            <div class="mb-4">
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Ім'я</label>
-                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Введіть ваше ім'я" required>
-            </div>
-            <!-- Номер телефону -->
-            <div class="mb-4">
-                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Номер телефону</label>
-                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="+380 123 456 789" required>
-            </div>
-            <!-- Вік дитини -->
-            <div class="mb-4">
-                <label for="childAge" class="block text-sm font-medium text-gray-700 mb-2">Вік дитини</label>
-                <input type="number" id="childAge" name="childAge" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Вкажіть вік дитини" required>
-            </div>
-            <!-- Ім'я дитини -->
-            <div class="mb-4">
-                <label for="childName" class="block text-sm font-medium text-gray-700 mb-2">Ім'я дитини</label>
-                <input type="text" id="childName" name="childName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Ім'я дитини" required>
-            </div>
-            <!-- Питання -->
-            <div class="mb-4">
-                <label for="question" class="block text-sm font-medium text-gray-700 mb-2">Питання</label>
-                <textarea id="question" name="question" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Ваше питання"></textarea>
-            </div>
-            <!-- Кнопка відправлення -->
-            <button type="submit" class="w-full bg-[#720bc4] text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="send">
-                Надіслати
-            </button>
-        </form>
-    </div>
-</section>
+    <section id="Contact" class="py-12" style="margin-top: 10%; margin-bottom: 10%;" data-aos="fade-up">
+           <div class="container mx-auto max-w-lg px-4">
+               <h2 class="text-3xl font-bold text-center mb-6">Залишились питання? Записатись на екскурсію?</h2>
+               <h3 class="text-xl italic text-center mb-6">Заповніть форму і ми з вами зв'яжемось в найкоротший термін</h3>
+               <form id="contactForm" class="bg-white p-6 rounded-lg shadow-md">
+                   <!-- Ім'я -->
+                   <div class="mb-4">
+                       <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Ім'я</label>
+                       <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Введіть ваше ім'я" required>
+                   </div>
+                   <!-- Номер телефону -->
+                   <div class="mb-4">
+                       <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Номер телефону</label>
+                       <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="+380 123 456 789" required>
+                   </div>
+                   <!-- Вік дитини -->
+                   <div class="mb-4">
+                       <label for="childAge" class="block text-sm font-medium text-gray-700 mb-2">Вік дитини</label>
+                       <input type="number" id="childAge" name="childAge" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Вкажіть вік дитини" required>
+                   </div>
+                   <!-- Ім'я дитини -->
+                   <div class="mb-4">
+                       <label for="childName" class="block text-sm font-medium text-gray-700 mb-2">Ім'я дитини</label>
+                       <input type="text" id="childName" name="childName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Ім'я дитини" required>
+                   </div>
+                   <!-- Питання -->
+                   <div class="mb-4">
+                       <label for="question" class="block text-sm font-medium text-gray-700 mb-2">Питання</label>
+                       <textarea id="question" name="question" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Ваше питання"></textarea>
+                   </div>
+                   <!-- Політика та умови використання -->
+                   <div class="mb-4">
+                       <label class="check-box inline-flex items-center">
+                           <input type="checkbox" id="terms" name="terms" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-2 focus:ring-indigo-400" required>
+                           <span class="ml-2 text-sm text-gray-700">Я погоджуюсь з <a href="pages/privacy-policy.html" class="text-indigo-500 hover:underline">політикою конфіденційності</a> та надаю згоду на <a href="pages/public-offer.html" class="text-indigo-500 hover:underline">обробку моїх персональних даних</a>.</span>
+                       </label>
+                   </div>
 
-<footer class="bg-gradient-to-r from-[#321fb2] to-[#720bc4] rounded-t-3xl py-12">
-    <div class="container mx-auto text-white">
-        <!-- Main footer content -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
-            <!-- About Us Section -->
-            <div class="text-center">
-                <h3 class="text-xl font-semibold mb-4">Про нас</h3>
-                <p>Приватний садок «Радість» пропонує найкраще для ваших дітей.</p>
-            </div>
+                   <!-- Кнопка відправлення -->
+                   <button type="submit" class="w-full bg-[#720bc4] text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="send">
+                       Надіслати
+                   </button>
+               </form>
+           </div>
+    </section>
 
-            <!-- Useful Links Section -->
-            <div class="text-center">
-                <h3 class="text-xl font-semibold mb-4">Корисні посилання</h3>
-                <ul>
-                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Головна</a></li>
-                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Наші послуги</a></li>
-                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Контакти</a></li>
-                    <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Блог</a></li>
-                </ul>
-            </div>
 
-            <!-- Navigation Links Section -->
-            <div class="text-center">
-                <h3 class="text-xl font-semibold mb-4">Навігація</h3>
-                <ul>
-                    <li><a href="#About" class="text-[#f8f8f8] hover:text-[#720bc4]">Про нас</a></li>
-                    <li><a href="#Advantages" class="text-[#f8f8f8] hover:text-[#720bc4]">Наші переваги</a></li>
-                    <li><a href="#Question" class="text-[#f8f8f8] hover:text-[#720bc4]">Відповіді на питання</a></li>
-                    <li><a href="#Contact" class="text-[#f8f8f8] hover:text-[#720bc4]">Контакти</a></li>
-                </ul>
-            </div>
+   <footer class="bg-gradient-to-r from-[#321fb2] to-[#720bc4] rounded-t-3xl py-12">
+       <div class="container mx-auto text-white">
+           <!-- Main footer content -->
+           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+               <!-- About Us Section -->
+               <div class="text-center">
+                   <h3 class="text-xl font-semibold mb-4">Про нас</h3>
+                   <p>Приватний садок «Радість» пропонує найкраще для ваших дітей.</p>
+               </div>
 
-            <!-- Social Media Section -->
-            <div class="text-center">
-                <h3 class="text-xl font-semibold mb-4">Ми в соцмережах</h3>
-                <div class="flex justify-center space-x-4">
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/radist_sadochok_kolomyia" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                        <i class="fa-brands fa-instagram text-3xl"></i>
-                    </a>
-                    <!-- TikTok -->
-                    <a href="https://www.tiktok.com/@sadochok_radist" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                        <i class="fa-brands fa-tiktok text-3xl"></i>
-                    </a>
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/RadistSadochokKolomiya" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
-                        <i class="fa-brands fa-facebook text-3xl"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+               <!-- Useful Links Section -->
+               <div class="text-center">
+                   <h3 class="text-xl font-semibold mb-4">Корисні посилання</h3>
+                   <ul>
+                       <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Головна</a></li>
+                       <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Наші послуги</a></li>
+                       <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Контакти</a></li>
+                       <li><a href="#" class="text-[#f8f8f8] hover:text-[#720bc4]">Блог</a></li>
+                   </ul>
+               </div>
 
-        <!-- Bottom footer -->
-        <div class="text-center mt-8">
-            <p>© 2022 Приватний садок «Радість». Всі права захищені.</p>
-            <p>
-                Designed by 
-                <a href="https://www.instagram.com/__pedelo__" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="text-[#f8f8f8] font-bold hover:text-[#720bc4]">
-                    __pedelo__
-                </a>
-            </p>
-        </div>
-    </div>
-</footer>
+               <!-- Navigation Links Section -->
+               <div class="text-center">
+                   <h3 class="text-xl font-semibold mb-4">Навігація</h3>
+                   <ul>
+                       <li><a href="#About" class="text-[#f8f8f8] hover:text-[#720bc4]">Про нас</a></li>
+                       <li><a href="#Advantages" class="text-[#f8f8f8] hover:text-[#720bc4]">Наші переваги</a></li>
+                       <li><a href="#Question" class="text-[#f8f8f8] hover:text-[#720bc4]">Відповіді на питання</a></li>
+                       <li><a href="#Contact" class="text-[#f8f8f8] hover:text-[#720bc4]">Контакти</a></li>
+                   </ul>
+               </div>
+
+               <!-- Social Media Section -->
+               <div class="text-center">
+                   <h3 class="text-xl font-semibold mb-4">Ми в соцмережах</h3>
+                   <div class="flex justify-center space-x-4">
+                       <!-- Instagram -->
+                       <a href="https://www.instagram.com/radist_sadochok_kolomyia" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                           <i class="fa-brands fa-instagram text-3xl"></i>
+                       </a>
+                       <!-- TikTok -->
+                       <a href="https://www.tiktok.com/@sadochok_radist" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                           <i class="fa-brands fa-tiktok text-3xl"></i>
+                       </a>
+                       <!-- Facebook -->
+                       <a href="https://www.facebook.com/RadistSadochokKolomiya" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded hover:bg-[#720bc4] hover:text-white transition">
+                           <i class="fa-brands fa-facebook text-3xl"></i>
+                       </a>
+                   </div>
+               </div>
+           </div>
+           <div class="text-center mt-5">
+               <h1 class="text-xl font-bold">Політика і умови використання</h1>
+               <ul>
+                   <li><a href="/privacy-policy" class="text-[#f8f8f8] hover:text-[#720bc4]">Політика конфіденційності</a></li>
+                   <li><a href="/terms-of-service" class="text-[#f8f8f8] hover:text-[#720bc4]">Умови використання</a></li>
+               </ul>
+           </div>
+
+           <!-- Bottom footer -->
+           <div class="text-center mt-8">
+               <p>© 2022 Приватний садок «Радість». Всі права захищені.</p>
+               <p>
+                   Designed by
+                   <a href="https://www.instagram.com/__pedelo__"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-[#f8f8f8] font-bold hover:text-[#720bc4]">
+                       __pedelo__
+                   </a>
+               </p>
+           </div>
+
+       </div>
+   </footer>
+
 
 
     
@@ -929,6 +947,26 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@1.4.4/dist/flowbite.js"></script>
     <script src="main.js"></script>
     <script src="send.js"></script>
+
+   <script>
+       const check = document.getElementById('check');
+       const sendButton = document.getElementById('send');
+       const termsCheckbox = document.getElementById('terms');
+       const form = document.getElementById('contactForm');
+
+       check.addEventListener('click', () => {
+           check.classList.toggle('fa-check-square');
+           check.classList.toggle('fa-square');
+       });
+
+       form.addEventListener('submit', (e) => {
+           // Перевірка на вибір чекбокса
+           if (!termsCheckbox.checked) {
+               e.preventDefault();  // Зупиняємо відправку форми
+               alert('Будь ласка, погодьтесь з політикою конфіденційності та обробкою персональних даних!');
+           }
+       });
+   </script>
     <script>
         
     // Бургер-меню
