@@ -1,15 +1,19 @@
 /* Анімація для плавного розгортання */
 .answer {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .answer.open {
-    opacity: 1;
-    max-height: 500px; /* Ви можете налаштувати це під свій контент */
+  opacity: 1;
+  max-height: 500px; /* Ви можете налаштувати це під свій контент */
 }
 
-.font-bring { 
-    font-size: 18px;
+.font-bring {
+  font-size: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
